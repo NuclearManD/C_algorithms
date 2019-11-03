@@ -1,3 +1,7 @@
+/*
+	Unoptimized source for f16_fixedpoint.S (which is optimized)
+*/
+
 int mul_fp(int a, int b){
 	long val = a;
 	val *= b;
@@ -5,6 +9,6 @@ int mul_fp(int a, int b){
 }
 
 int div_fp(int a, int b){
-	long val = a << 16;
-	return val / b;
+	long val = a;
+	return (val << 16) / b;
 }
